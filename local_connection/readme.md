@@ -87,7 +87,7 @@ $STREAMER_PATH/mjpg_streamer -i"input_raspicam.so -fps 15 vf" -o"output_http.so 
 ## 스트리밍 하기
 
 먼저 스트리밍하기 앞서, 무선랜을 사용하는 ip를 확인해야합니다.
-``` iconfig ```를 이용하여 본인의 ip를 확인합니다.
+``` ifconfig ```를 이용하여 본인의 inet을 통해 ip를 확인합니다.
 
 그리고 본인의 ip주소가 예를 들어 172.129.3.15라고 하면, 브라우저에 172.129.3.15:8091을 입력합니다.
 
