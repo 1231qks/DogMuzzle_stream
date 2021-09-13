@@ -3,7 +3,7 @@
 같은 동일 네트워크에서 스트리밍을 하는 방법입니다.
 영상스트리밍 패키지는 Mjpeg-streamer를 사용합니다.
 
-이미지
+(이미지)
 
 해당 패키지는 다른 스트리밍 패키지에 비해 가장 빠른 응답시간을 보여줍니다.
 그리고 딥러닝 모델 CNN, YOLO에서 잘 작동합니다.
@@ -13,7 +13,9 @@
 >준비물
 
 라즈베리파이보드, 카메라 v2 또는 12MP 고품질 HQ모델 광각렌즈, 무선랜
+
 OPEN-CV 4.5.1이 기본적으로 설치되어야 하고 카메라 권한이 허용되어야 합니다.
+
 OPEN CV설치 방법은 위에 파일로 업로드되어있습니다.
 
 >필요한 라이브러리
@@ -33,11 +35,13 @@ git clone을 통해 mjpg-streamer에 대한 패키지를 다운로드 합니다.
 # mjpg-streamer 컴파일
 
 mjpg-streamer를 컴파일 하기 위에 다음과 같은 패키지를 설치합니다.
+
 ``` sudo apt-get install cmake python-pil python3-pil libjpeg-dev build-essential  ```
 
 # 컴파일 에러발생시 대처사항
 
 보통 OPEN CV를 사용할 경우 컴파일 에러가 발생되는데, nano 및 vi 편집기를 열어서 수정합니다:
+
 ``` nano mjpg-streamer/mjpg-streamer-experimental/plugins/input_opencv/input_opencv.cpp ```
 
 문자열 중 compression_params.push_back을 찾아서 다음과 같이 수정합니다.
@@ -82,15 +86,20 @@ $STREAMER_PATH/mjpg_streamer -i"input_raspicam.so -fps 15 vf" -o"output_http.so 
 ``` ipconfig ```를 이용하여 본인의 ip를 확인합니다.
 
 그리고 본인의 ip주소가 예를 들어 172.129.3.15라고 하면, 브라우저에 172.129.3.15:8091을 입력합니다.
+
 8091은 이전에 nano에서 편집했던 포트번호가 기준입니다.
 
-
+#
 (브라우저 주소 이미지)
-
+#
 
 모델에 적용을 하기위해 웹페이지 없이 영상만 출력하기 위해 172.129.3.15:8091/?action=snapshot를 입력합니다.
+
 즉 아이피 주소 뒤에 ?action=snapshot 만 추가하면 됩니다.
+
+#
 (모델 이미지 및 gpu 구동 이미지)
+#
 
 이렇게 mjpg-streamer를 통해 영상스트리밍을 받아서 YOLO, CNN모델에 적용을 시켜보았습니다.
 해당 스트리밍 방법은 동일 네트워크 환경에서 구동이 가능하며, 외부 네트워크에서는 이 방법이 아닌 AWS를 활용한 방법으로 구동하였습니다.
