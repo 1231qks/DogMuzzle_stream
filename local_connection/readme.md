@@ -19,12 +19,16 @@ OPEN-CV 4.5.1이 기본적으로 설치되어야 하고 카메라 권한이 허�
 OPEN CV설치 방법은 위에 파일로 업로드되어있습니다.
 
 >필요한 라이브러리
+
 camke, python-pil, python3-pil, libjpeg-dev, build-essential
 
-> Mjpg-stream 설치하는 방법
 
-# git clone에서 다운로드
+
+# Mjpg_streamer 설치하는방법
+
+## git clone에서 다운로드
 git clone을 통해 mjpg-streamer에 대한 패키지를 다운로드 합니다.
+
 
 먼저 git을 설치합니다.
 ``` sudo apt-get install git```
@@ -32,13 +36,13 @@ git clone을 통해 mjpg-streamer에 대한 패키지를 다운로드 합니다.
 그리고 소스코드를 다운로드 합니다.
 ``` git clone https://github.com/jacksonliam/mjpg-streamer.git ```
 
-# mjpg-streamer 컴파일
+## mjpg-streamer 컴파일
 
 mjpg-streamer를 컴파일 하기 위에 다음과 같은 패키지를 설치합니다.
 
 ``` sudo apt-get install cmake python-pil python3-pil libjpeg-dev build-essential  ```
 
-# 컴파일 에러발생시 대처사항
+## 컴파일 에러발생시 대처사항
 
 보통 OPEN CV를 사용할 경우 컴파일 에러가 발생되는데, nano 및 vi 편집기를 열어서 수정합니다:
 
@@ -49,7 +53,7 @@ mjpg-streamer를 컴파일 하기 위에 다음과 같은 패키지를 설치합
 ```compression_params.push_back(CV_IMWRITE_JPEG_QUALITY);``` 이 부분을
 ```compression_params.push_back(cv::IMWRITE_JPEG_QUALITY);```로 수정하면 됩니다.
 
-# mjpg-streamer 컴파일 및 설치 진행
+## mjpg-streamer 컴파일 및 설치 진행
 
 mjpg-streamer 소스코드가 있는 디렉토리에서 컴파일과 설치를 해야합니다.
 ``` cd mjpg-streamer/mjpg-streamer-experimental/ ```
@@ -62,7 +66,7 @@ mjpg-streamer 소스코드가 있는 디렉토리에서 컴파일과 설치를 �
 
 이제 mjpg-streamer에 대한 컴파일을 완료하였습니다. 
 
-# 스트리밍 코드 작성
+## 스트리밍 코드 작성
 
 컴파일 완료 후 홈 디렉토리로 이동합니다. 
 ``` cd ```
@@ -80,7 +84,7 @@ $STREAMER_PATH/mjpg_streamer -i"input_raspicam.so -fps 15 vf" -o"output_http.so 
 ```
 우리는 15프레임을 이용하고, 네트워크 포트번호는 8091을 이용할 것입니다.
 
-# 스트리밍 하기
+## 스트리밍 하기
 
 먼저 스트리밍하기 앞서, 무선랜을 사용하는 ip를 확인해야합니다.
 ``` ipconfig ```를 이용하여 본인의 ip를 확인합니다.
