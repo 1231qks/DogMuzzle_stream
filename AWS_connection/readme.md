@@ -99,7 +99,9 @@ export PATH=$PATH:$JAVA_HOME/bin
 
 컴파일을 하기 위해 make를 실행합니다.
 
-''' make '''
+``` make ```
+
+해당 작업이 끝나면 다음 작업으로 진행합니다.
 
 ### GStremer 플러그인(Kvssink) 하기
 
