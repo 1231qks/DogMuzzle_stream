@@ -158,9 +158,10 @@ gst-launch-1.0 v4l2src do-timestamp=TRUE device=/dev/video0 ! videoconvert ! vid
 
 
 만일 계속해서 오류가 발생하면서 스트리밍이 되지 않는다면 다음과 같은 웹사이트에서 확인할 수 있습니다. 
+
 https://aws-samples.github.io/amazon-kinesis-video-streams-media-viewer/
 
-여기서는 Region, AWS Access Key, AWS Secret Key, Stream name에 값을 넣어주시고 'Start playback'을 실행시키면 됩니다.
+이 웹사이트에서는 Region, AWS Access Key, AWS Secret Key, Stream name에 값을 넣어주시고 'Start playback'을 실행시키면 됩니다.
 
 
 ![8](https://user-images.githubusercontent.com/77596373/133757671-cc22b691-4ca3-41e2-bf5d-d1bc5553eca6.PNG)
