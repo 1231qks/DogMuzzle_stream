@@ -144,7 +144,7 @@ export LD_LIBRARY_PATH=/home/pi/amazon-kinesis-video-streams-producer-sdk-cpp/op
 정상적으로 kvssink가 실행되었으면, 다음과 같은 코드를 터미널에 입력합니다.
 
 ```
-gst-launch-1.0 v4l2src do-timestamp=TRUE device=/dev/video0 ! videoconvert ! video/x-raw,format=I420,width=640,height=480,framerate=15/1 ! x264enc  bframes=0 key-int-max=45 bitrate=500 ! video/x-h264,stream-format=avc,alignment=au,profile=baseline ! kvssink stream-name="생성한 스트림 이름(NAME)" storage-size=512 access-key="IAM에서 발급받은 엑세스 키(KEY)" secret-key="IAM에세 발급받은 비밀번호 " aws-region="ap-northeast-2(서울 기준)"
+gst-launch-1.0 v4l2src do-timestamp=TRUE device=/dev/video0 ! videoconvert ! video/x-raw,format=I420,width=640,height=480,framerate=15/1 ! x264enc  bframes=0 key-int-max=45 bitrate=500 ! video/x-h264,stream-format=avc,alignment=au,profile=baseline ! kvssink stream-name="생성한 스트림 이름(NAME)" storage-size=512 access-key="IAM에서 발급받은 엑세스 키(KEY)" secret-key="IAM에서 발급받은 비밀번호(엑셀 확인 추천)" aws-region="ap-northeast-2(서울 기준)"
 ```
 여기서 제가 한글로 한 부분인 스트림 이름과 IAM에서 발급받은 엑세스키, 비밀번호, 그리고 리젼(위치)입니다. "" 따옴표 안에 그대로 키 및 값들을 넣으시면 됩니다.
 
