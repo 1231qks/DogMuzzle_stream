@@ -8,7 +8,7 @@
 
 그리고 '비디오 스트림 생성'을 눌러줍니다.
 
-![캡처2](https://user-images.githubusercontent.com/77596373/133746317-2d558bf1-ab4c-4186-9728-421be3aa2d4b.PNG)
+![1](https://user-images.githubusercontent.com/77596373/135393685-c5906a63-8536-4cdb-b178-6685ed22e98e.png)
 
 다음과 같이 본인이 원하는 스트림 이름을 영문으로 지정해줍니다. 
 
@@ -16,15 +16,15 @@
 
 검색을 통해 IAM서비스에 접속합니다.
 
-![캡처3](https://user-images.githubusercontent.com/77596373/133746497-d96a2b86-aea0-451a-8092-6662f532eb6e.PNG)
+![2](https://user-images.githubusercontent.com/77596373/135393689-dee3b822-8fd1-474c-a437-7c1801337c61.png)
 
 IAM대시보드에 접속하면 빠른링크란의 '내 보안 자격 증명'을 클릭합니다.
 
-![캡처4](https://user-images.githubusercontent.com/77596373/133746611-a12afa41-efe7-4b6a-9e25-26fc5ab33987.PNG)
+![3](https://user-images.githubusercontent.com/77596373/135393693-f179d307-9844-44bb-8deb-74a6c404a076.png)
 
 그리고 '엑세스 키 만들기'를 클릭하면 
 
-![캡처6](https://user-images.githubusercontent.com/77596373/133746822-6b9644ff-bfec-49e1-a420-f153082241fe.PNG)
+![4](https://user-images.githubusercontent.com/77596373/135393694-e0909cb9-43b6-4671-98d5-971597405a07.png)
 
 **반드시 ".csv파일 다운로드"를 클릭하세요.**
 이 창에서 엑세스키ID와 비밀 엑세스키(암호)를 확인할 수 있습니다.
